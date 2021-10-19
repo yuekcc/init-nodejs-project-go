@@ -2,6 +2,16 @@
 
 a simple tool for init a new nodejs(npm) project.
 
+## install
+
+```sh
+$ go version
+go version go1.17.2 linux/arm64
+$ go install github.com/yuekcc/init-nodejs-project@latest
+$ init-nodejs-project -h
+$ # ...
+```
+
 ## usage
 
 ```sh

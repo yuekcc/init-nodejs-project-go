@@ -1,3 +1,3 @@
-module lambdadriver.space/init-nodejs-project
+module github.com/yuekcc/init-nodejs-project
 
 go 1.17

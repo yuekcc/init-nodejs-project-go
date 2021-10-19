@@ -2,6 +2,7 @@ package main
 
 import (
 	"embed"
+	"flag"
 	"io"
 	"os"
 	"path"
@@ -11,6 +12,9 @@ import (
 var (
 	//go:embed templates/*
 	templates embed.FS
+
+	authorFlag  string
+	licenseFlag string
 )
 
 type Meta struct {
@@ -49,11 +53,18 @@ func parseTemplate(tplName string, meta Meta) {
 	}
 }
 
+func init() {
+	flag.StringVar(&authorFlag, "author", "yuekcc", "setup project author, default: yuekcc")
+	flag.StringVar(&licenseFlag, "license", "MIT", "setup project license, default: MIT")
+}
+
 func main() {
+	flag.Parse()
+
 	meta := Meta{
 		ProjectName: path.Base(pwd()),
-		Author:      "yuekcc",
-		License:     "MIT",
+		Author:      authorFlag,
+		License:     licenseFlag,
 	}
 
 	templateList := []string{

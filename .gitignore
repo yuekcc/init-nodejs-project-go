@@ -1,0 +1,4 @@
+node_modules
+*.log
+init-nodejs-project
+init-nodejs-project.exe

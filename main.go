@@ -5,7 +5,7 @@ import (
 	"flag"
 	"io"
 	"os"
-	"path"
+	"path/filepath"
 	"text/template"
 )
 
@@ -62,7 +62,7 @@ func main() {
 	flag.Parse()
 
 	meta := Meta{
-		ProjectName: path.Base(pwd()),
+		ProjectName: filepath.Base(pwd()),
 		Author:      authorFlag,
 		License:     licenseFlag,
 	}

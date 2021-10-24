@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"text/template"
+	"time"
 )
 
 var (
@@ -21,6 +22,7 @@ type Meta struct {
 	ProjectName string
 	Author      string
 	License     string
+	Year        string
 }
 
 func pwd() string {
@@ -65,11 +67,13 @@ func main() {
 		ProjectName: filepath.Base(pwd()),
 		Author:      authorFlag,
 		License:     licenseFlag,
+		Year:        time.Now().Format("2006"),
 	}
 
 	templateList := []string{
 		".editorconfig",
 		".gitignore",
+		"LICENSE",
 		"package.json",
 	}
 

@@ -2,6 +2,8 @@
 
 a simple tool for init a new nodejs(npm) project.
 
+🚧🚧deprecated, see [init-nodejs-project-rs](https://github.com/yuekcc/init-nodejs-project-rs)🚧🚧
+
 ## install
 
 ```sh
